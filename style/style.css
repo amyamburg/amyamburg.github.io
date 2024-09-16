@@ -1,6 +1,5 @@
 header {
-    background-color: #f9e0ad
-    color: white;
+    background-color: #f9e0ad;
     padding: 20px;
     display: flex;
     justify-content: flex-start;
@@ -30,7 +29,7 @@ ul{
 
 }
 footer{
-    background-color: #f9e0ad
+    background-color: #f9e0ad;
     padding: 20px;
 }
 .footer-div{
@@ -39,11 +38,11 @@ footer{
     align-items: center; /* Center buttons vertically */
 }
 .footer-btn{
-    background-color: #ffaf0c
+    background-color: #ffaf0c;
     padding: 10px 20px;
     text-align: center;
     border-radius: 4px;
 }
 .footer-btn:hover {
-    background-color: #d99200 ; /* Darker colour when hover */
+    background-color: #d99200; /* Darker colour when hover */
 }
