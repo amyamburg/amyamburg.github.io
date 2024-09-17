@@ -20,6 +20,7 @@ ul{
 .art-img{
     width:100%;
     max-width: 800px;
+    border-radius: 8px;
     height: auto; 
     display: block;
 }
