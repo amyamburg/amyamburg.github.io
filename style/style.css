@@ -1,6 +1,11 @@
+body{
+    border-top: 1px solid #e1251b ;
+    font-family: sans-serif;
+    
+}
 header {
-    background-color: #f9e0ad;
     padding: 20px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -23,13 +28,16 @@ ul{
     height: auto; 
     display: block;
 }
+.map-div{
+    background-color: #ccc;
+}
 
 .map-img {
     height: 100px; /* smaller map */
 
 }
 footer{
-    background-color: #f9e0ad;
+    background-color: #333;
     padding: 20px;
 }
 .footer-div{
@@ -38,11 +46,11 @@ footer{
     align-items: center; /* Center buttons vertically */
 }
 .footer-btn{
-    background-color: #ffaf0c;
+    background-color: #e1251b;
     padding: 10px 20px;
     text-align: center;
     border-radius: 4px;
 }
 .footer-btn:hover {
-    background-color: #d99200; /* Darker colour when hover */
+    background-color: #be0403; /* Darker colour when hover */
 }
