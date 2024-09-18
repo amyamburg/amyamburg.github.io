@@ -23,6 +23,20 @@ header {
 ul{
     list-style-type: none; /*remove the bullet points*/
 }
+
+/*.art-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.art-title {
+    margin-right: 20px;
+}
+Putting this here just in case I want to test out the alignment with the images / text.
+- Shianne     
+*/
+
 .art-img-div{
     padding: 0 20px;
     box-sizing: border-box;
