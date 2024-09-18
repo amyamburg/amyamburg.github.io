@@ -8,6 +8,7 @@ body{
 header {
     margin-top: 0px;
     border-top: 5px solid #e1251b ;
+    border-bottom: 1px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
     display: flex;
