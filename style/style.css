@@ -1,9 +1,11 @@
 body{
-    border-top: 10px solid #e1251b ;
+    
     font-family: sans-serif;
     
 }
 header {
+    margin-top: 0px;
+    border-top: 10px solid #e1251b ;
     padding: 20px;
     margin-bottom: 20px;
     display: flex;
