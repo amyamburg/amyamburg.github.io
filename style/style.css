@@ -71,6 +71,7 @@ footer{
     text-align: center;
     border-radius: 4px;
     box-shadow: none;
+    color: black;
     border: none;
 }
 .footer-btn:hover {
