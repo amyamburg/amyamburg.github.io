@@ -53,6 +53,7 @@ footer{
     padding: 10px 20px;
     text-align: center;
     border-radius: 4px;
+    box-shadow: none;
 }
 .footer-btn:hover {
     background-color: #be0403; /* Darker colour when hover */
