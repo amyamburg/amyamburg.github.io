@@ -77,3 +77,8 @@ footer{
 .footer-btn:hover {
     background-color: #be0403; /* Darker colour when hover */
 }
+
+.stickToBottom {
+    position: sticky;
+    bottom: 0;
+}
