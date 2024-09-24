@@ -30,9 +30,10 @@ document.getElementById('prev-button').addEventListener('click', function () {
 function navigateToPage() {
     // get the page to go to next and go there
     if (currPage === 0) {
-        window.location.href = 'index.html';
-    } else {
-        const pageUrl = `pages/page${currPage}.html`;
+        window.location.href = '/index.html';
+    }
+    else {
+        const pageUrl = `/pages/page${currPage}.html`;
         window.location.href = pageUrl;
     }
 }
