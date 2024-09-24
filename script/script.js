@@ -1,4 +1,4 @@
-let currPage = 1;
+let currPage = 0;
 let pageMax = 2;
 // next button functionality (incomplete)
 document.getElementById('next-button').addEventListener('click', function () {
@@ -7,7 +7,7 @@ document.getElementById('next-button').addEventListener('click', function () {
         currPage++; // increase the page number
     }
     else{
-        currPage = 1;
+        currPage = 0;
     }
     // go to next page
     navigateToPage();
@@ -16,7 +16,7 @@ document.getElementById('next-button').addEventListener('click', function () {
 // pervious button functionality (incomplete)
 document.getElementById('prev-button').addEventListener('click', function () {
     
-    if (currPage > 1) {
+    if (currPage > 0) {
         currPage--; // decrease the page number
     }
     else{
@@ -27,7 +27,7 @@ document.getElementById('prev-button').addEventListener('click', function () {
 });
 function navigateToPage() {
     // get the page to go to next and go there
-    if (currentPage === 1) {
+    if (currPage === 0) {
         window.location.href = 'index.html';
     } else {
         const pageUrl = `pages/page${currPage}.html`;
