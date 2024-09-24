@@ -12,6 +12,7 @@ document.getElementById('next-button').addEventListener('click', function () {
         currPage = 0;
     }
     // go to next page
+    console.log("page: " + currPage);
     navigateToPage();
 });
 
@@ -25,6 +26,7 @@ document.getElementById('prev-button').addEventListener('click', function () {
         currPage = pageMax;
     }
     // go to previous page
+    console.log("page: " + currPage);
     navigateToPage();
 });
 function navigateToPage() {
