@@ -10,7 +10,7 @@ document.getElementById('next-button').addEventListener('click', function () {
         currPage = 1;
     }
     // go to next page
-    navigateToPage()
+    navigateToPage();
 });
 
 // pervious button functionality (incomplete)
@@ -23,7 +23,7 @@ document.getElementById('prev-button').addEventListener('click', function () {
         currPage = pageMax;
     }
     // go to previous page
-    navigateToPage()
+    navigateToPage();
 });
 function navigateToPage() {
     // get the page to go to next and go there
