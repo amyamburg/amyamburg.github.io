@@ -1,3 +1,5 @@
+console.log("js connected");
+
 let currPage = 0;
 let pageMax = 2;
 // next button functionality (incomplete)
