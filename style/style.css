@@ -78,7 +78,6 @@ footer{
     box-shadow: none;
     color: black;
     font-size: 200%;  
-    font-weight: bold;
     border: none;
     transition: transform 0.3s;
 }
