@@ -61,19 +61,12 @@ Putting this here just in case I want to test out the alignment with the images 
     height: 100px; /* smaller map */
 
 }
-.not-sticky-footer{
+
+footer{
     background-color: #333;
 
 }
-footer{
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-}
-.footer-div{
-    display: flex;
-    justify-content: space-between; /* Space out buttons to the edges */
-    align-items: center; /* Center buttons vertically */
-}
+
 .footer-btn{
     background-color: #e1251b;
     padding: 10px 20px;
@@ -90,4 +83,9 @@ footer{
 .stickToBottom {
     position: sticky;
     bottom: 0;
+    display: flex;
+    justify-content: space-between; /* Space out buttons to the edges */
+    align-items: center; /* Center buttons vertically */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
 }
