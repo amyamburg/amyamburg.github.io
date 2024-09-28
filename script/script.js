@@ -22,7 +22,7 @@ function setCurrPageURL(){
     } else {
         currPage = 0; // default to index
     }
-    updatePageNumber(currPage);
+    updateCurrPage(currPage);
     console.log("page: " + currPage);
 }
 setCurrPageURL();
