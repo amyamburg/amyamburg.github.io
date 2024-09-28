@@ -71,7 +71,8 @@ footer{
 
 .footer-btn{
     background-color: #e1251b;
-    padding: 10px 20px;
+    display: inline-block;
+    padding: 8px 16px;
     text-align: center;
     border-radius: 50%;
     box-shadow: none;
