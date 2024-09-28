@@ -2,6 +2,7 @@ body{
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
+    margin-bottom: 0px;
     font-family: sans-serif;
     
 }
@@ -64,7 +65,8 @@ Putting this here just in case I want to test out the alignment with the images 
 
 footer{
     background-color: #333;
-
+    color: white;
+    padding: 20px;
 }
 
 .footer-btn{
@@ -74,10 +76,14 @@ footer{
     border-radius: 4px;
     box-shadow: none;
     color: black;
+    font-size: 150%;  
+    font-weight: bold;
     border: none;
+    transition: transform 0.3s;
 }
 .footer-btn:hover {
     background-color: #be0403; /* Darker colour when hover */
+    transform: scale(1.2); /*make the arrow bigger*/
 }
 
 .stickToBottom {
