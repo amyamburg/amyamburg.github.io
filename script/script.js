@@ -10,6 +10,22 @@ function updateCurrPage(page) {
     localStorage.setItem('currPage', page);
 }
 
+//make currPage the current page
+function setCurrPageURL(){
+    const currPath = window.location.pathname;
+    if(currPath.includes("index.html") || currPath === "/"){
+        currPage = 0;
+    } else if (currentPath.includes("page1.html")) {
+        currPage = 1;
+    } else if (currentPath.includes("page2.html")) {
+        currPage = 2;
+    } else {
+        currPage = 0; // default to index
+    }
+    updatePageNumber(currPage);
+    console.log("page: " + currPage);
+}
+setCurrPageURL();
 
 // next button functionality (incomplete)
 document.getElementById('next-button').addEventListener('click', function () {
