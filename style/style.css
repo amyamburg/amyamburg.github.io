@@ -54,9 +54,9 @@ Putting this here just in case I want to test out the alignment with the images 
     height: auto; 
     display: block;
 }
-.map-div{
-    background-color: #ccc;
-}
+/* .map-div{
+    
+} */
 
 .map-img {
     height: 100px; /* smaller map */
@@ -92,6 +92,6 @@ footer{
     display: flex;
     justify-content: space-between; /* Space out buttons to the edges */
     align-items: center; /* Center buttons vertically */
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(204, 204, 204, 0.5);
     padding: 20px;
 }
