@@ -49,9 +49,10 @@ ul{
     background-color: #e1251b;
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 20px 45px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 18px;
 }
 
 .control-btn:hover {
@@ -59,7 +60,9 @@ ul{
 }
 
 #seekBar {
-    width: 200px;
+    width: 300px;
+    height: 20px;
+    cursor: pointer;
 }
 
 .art-img-div{
