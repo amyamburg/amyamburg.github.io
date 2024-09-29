@@ -33,7 +33,6 @@ function setCurrPageURL(){
 
     console.log("page: " + currPage);
 }
-setCurrPageURL();
 
 // next button functionality (incomplete)
 document.getElementById('next-button').addEventListener('click', function () {
@@ -78,6 +77,7 @@ function navigateToPage() {
 // manage text file loading
 
 document.addEventListener('DOMContentLoaded', function() {
+    setCurrPageURL();
     const contentDiv = document.getElementById('text-div');
     const fileName = contentDiv.getAttribute('data-file');
     if (fileName) {
