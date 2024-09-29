@@ -60,3 +60,28 @@ function navigateToPage() {
         window.location.href = pageUrl;
     }
 }
+
+// manage text file loading
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contentDiv = document.getElementById('text-div');
+    const fileName = contentDiv.getAttribute('data-file');
+    if (fileName) {
+        loadText(fileName, 'text-div');
+    }
+});
+function loadText(fileName, divId){
+    fetch(fileName)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Cound not find the text file' + response.statusText);
+        }
+        return response.text();
+    })
+    .then(data => {
+        document.getElementById(divId).textContent = data;
+    })
+    .catch(error => {
+        console.error('There was a problem fetching the text file:', error);
+    });
+}
