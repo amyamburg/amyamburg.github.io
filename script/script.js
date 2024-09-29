@@ -5,16 +5,15 @@ const pages = [
     "index",
     "Te-Poutokomanawa",
     "Te-Toka-a-Tirikawa",
-    "Te-Pou-Ruawhetū-a-Rēhua",
-    "Te-Kuraimonoa",
-    "Pātiki",
-    "Ngā-Maunga",
+    "Te-Pou-Ruawhet%C5%AB-a-R%C4%93hua",
+    "P%C4%81tiki",
+    "Ng%C4%81-Maunga",
     "He-niho-taniwha-he-kete-kai-he-maunga",
-    "Pou-tūārongo",
-    "Ngā-Waka",
+    "Pou-t%C5%AB%C4%81rongo",
+    "Ng%C4%81-Waka",
     "Te-Moana",
-    "Ngā-Hau-e-Whā-o-te-Ao",
-    "Hine-Turama-&-Hine-te-āhuru",
+    "Ng%C4%81-Hau-e-Wh%C4%81-o-te-Ao",
+    "Hine-Turama-%26-Hine-te-%C4%81huru",
     "Te-Manawaroa"
 ];
 // let currPage = 0;
