@@ -24,6 +24,12 @@ p {
     font-size: 30px;
 }
 
+#text-div {
+    font-size: 30px;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
 .logo-img {
     height: 50px; /* small logo */
     margin-right: 15px; /* put space between the title and logo */
@@ -32,6 +38,7 @@ ul{
     list-style-type: none; /*remove the bullet points*/
 }
 
+/* Audio stuff*/
 .audio-section
 {
    text-align: center;
@@ -64,6 +71,7 @@ ul{
     height: 20px;
     cursor: pointer;
 }
+/* End of audio stuff */
 
 .art-img-div{
     display: flex;
