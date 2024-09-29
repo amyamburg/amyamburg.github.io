@@ -102,3 +102,29 @@ function loadText(fileName, divId){
         console.error('There was a problem fetching the text file:', error);
     });
 }
+
+//Audio player stuff, please don't mind the mess
+const audioPlayer = document.getElementById('audioPlayer');
+const playBtn = document.getElementById('playBtn');
+const pauseBtn = document.getElementById('pauseBtn');
+const seekBar = document.getElementById('seekBar');
+
+//Play audio
+playBtn.addEventListener('click', () => {
+    audioPlayer.play();
+});
+
+//Pause
+pauseBtn.addEventListener('click', () => {
+    audioPlayer.pause();
+});
+
+//Update seek bar as the audio progresses
+audioPlayer.addEventListener('timeupdate', () => {
+    seekBar.value = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+});
+
+//seek audio
+seekBar.addEventListener('input', () => {
+    audioPlayer.currentTime = (seekBar.value / 100) * audioPlayer.duration;
+});

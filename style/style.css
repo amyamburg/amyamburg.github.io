@@ -32,12 +32,31 @@ ul{
     list-style-type: none; /*remove the bullet points*/
 }
 
-/*.audio-section
+.audio-section
 {
-    padding: 20px;
-    text-align: center;
-    background-color: rgba(204, 204, 204, 0.5);
-}*/
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.custom-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between the controls */
+}
+
+.control-btn {
+    background-color: #e1251b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.control-btn:hover {
+    background-color: #be0403;
+}
 
 .art-img-div{
     display: flex;
@@ -102,3 +121,5 @@ footer{
     width: 100%;
     padding-top: 10px;
 }
+
+
