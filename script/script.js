@@ -86,7 +86,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 function loadText(fileName, divId){
-    fetch(fileName)
+    let prefix = "";
+    if (window.location.pathname.includes("/pages/"))
+    {
+        // Go up one level for pages in the 'pages' folder
+        prefix = "../";
+    }
+
+    fetch(prefix + fileName)
     .then(response => {
         if (!response.ok) {
             throw new Error('Cound not find the text file' + response.statusText);
