@@ -63,9 +63,15 @@ document.getElementById('prev-button').addEventListener('click', function () {
     navigateToPage();
 });
 function navigateToPage() {
-
+    const pageUrl;
     // get the page to go to next and go there
-    const pageUrl = `/pages/${pages[currPage]}.html`;
+    if(currPage === 0){
+     pageUrl = `/${pages[currPage]}.html`;
+
+    } else{
+        pageUrl = `/pages/${pages[currPage]}.html`;
+
+    }
     window.location.href = pageUrl;
 }
 
