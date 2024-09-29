@@ -3,12 +3,8 @@ console.log("js connected");
 // let currPage = 0;
 let pageMax = 2;
 // local storage for page number, or else make it 0
-let currPage = parseInt(localStorage.getItem('currPage')) || 0;
+let currPage = 0;
 
-// update the current page to local storage
-function updateCurrPage(page) {
-    localStorage.setItem('currPage', page);
-}
 
 //make currPage the current page
 function setCurrPageURL(){
@@ -22,7 +18,6 @@ function setCurrPageURL(){
     } else {
         currPage = 0; // default to index
     }
-    updateCurrPage(currPage);
     console.log("page: " + currPage);
 }
 setCurrPageURL();
@@ -55,8 +50,7 @@ document.getElementById('prev-button').addEventListener('click', function () {
     navigateToPage();
 });
 function navigateToPage() {
-    //store page number
-    updateCurrPage(currPage);
+
     // get the page to go to next and go there
     if (currPage === 0) {
         window.location.href = '/index.html';
