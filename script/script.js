@@ -63,7 +63,7 @@ document.getElementById('prev-button').addEventListener('click', function () {
     navigateToPage();
 });
 function navigateToPage() {
-    const pageUrl;
+    const pageUrl = "";
     // get the page to go to next and go there
     if(currPage === 0){
      pageUrl = `/${pages[currPage]}.html`;
