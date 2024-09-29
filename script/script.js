@@ -121,7 +121,10 @@ pauseBtn.addEventListener('click', () => {
 
 //Update seek bar as the audio progresses
 audioPlayer.addEventListener('timeupdate', () => {
-    seekBar.value = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+    if (audioPlayer.duration)
+    {
+        seekBar.value = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+    }
 });
 
 //seek audio
