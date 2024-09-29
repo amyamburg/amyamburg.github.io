@@ -105,18 +105,20 @@ function loadText(fileName, divId){
 
 //Audio player stuff, please don't mind the mess
 const audioPlayer = document.getElementById('audioPlayer');
-const playBtn = document.getElementById('playBtn');
-const pauseBtn = document.getElementById('pauseBtn');
+const playPauseBtn = document.getElementById('playBtn');
 const seekBar = document.getElementById('seekBar');
 
 //Play audio
-playBtn.addEventListener('click', () => {
-    audioPlayer.play();
-});
-
-//Pause
-pauseBtn.addEventListener('click', () => {
-    audioPlayer.pause();
+playPauseBtn.addEventListener('click', () => {
+    if (audioPlayer.paused)
+    {
+        audioPlayer.play();
+        playPauseBtn.textContent = 'Pause';
+    } else {
+        audioPlayer.pause();
+        playPauseBtn.textContent = 'Play';
+    }
+    
 });
 
 //Update seek bar as the audio progresses
