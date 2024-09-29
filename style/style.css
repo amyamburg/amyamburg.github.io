@@ -32,18 +32,12 @@ ul{
     list-style-type: none; /*remove the bullet points*/
 }
 
-/*.art-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+.audio-section
+{
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(204, 204, 204, 0.5);
 }
-
-.art-title {
-    margin-right: 20px;
-}
-Putting this here just in case I want to test out the alignment with the images / text.
-- Shianne     
-*/
 
 .art-img-div{
     display: flex;

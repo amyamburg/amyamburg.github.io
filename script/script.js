@@ -85,15 +85,10 @@ document.addEventListener('DOMContentLoaded', function() {
         loadText(fileName, 'text-div');
     }
 });
-function loadText(fileName, divId){
-    let prefix = "";
-    if (window.location.pathname.includes("/pages/"))
-    {
-        // Go up one level for pages in the 'pages' folder
-        prefix = "../";
-    }
 
-    fetch(prefix + fileName)
+//Somehow this is making the text not load...
+function loadText(fileName, divId){
+    fetch(fileName)
     .then(response => {
         if (!response.ok) {
             throw new Error('Cound not find the text file' + response.statusText);
