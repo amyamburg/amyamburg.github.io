@@ -58,6 +58,10 @@ ul{
     background-color: #be0403;
 }
 
+#seekBar {
+    width: 200px;
+}
+
 .art-img-div{
     display: flex;
     justify-content: center;
