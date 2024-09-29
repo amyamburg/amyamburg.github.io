@@ -105,7 +105,7 @@ function loadText(fileName, divId){
 
 //Audio player stuff, please don't mind the mess
 const audioPlayer = document.getElementById('audioPlayer');
-const playPauseBtn = document.getElementById('playBtn');
+const playPauseBtn = document.getElementById('playPauseBtn');
 const seekBar = document.getElementById('seekBar');
 
 //Play audio
