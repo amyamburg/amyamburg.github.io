@@ -132,7 +132,8 @@ footer{
 .button-container
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    max-width: 600px;
     width: 100%;
     padding-top: 10px;
 }
