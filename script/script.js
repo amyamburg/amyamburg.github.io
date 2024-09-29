@@ -5,7 +5,8 @@ const pages = [
     "index",
     "Te-Poutokomanawa",
     "Te-Toka-a-Tirikawa",
-    "Te-Pou-Ruawhetū-a-RēhuaTe-Kuraimonoa",
+    "Te-Pou-Ruawhetū-a-Rēhua",
+    "Te-Kuraimonoa",
     "Pātiki",
     "Ngā-Maunga",
     "He-niho-taniwha-he-kete-kai-he-maunga",
@@ -17,7 +18,7 @@ const pages = [
     "Te-Manawaroa"
 ];
 // let currPage = 0;
-let pageMax = pages.length - 1;
+let pageMax = (pages.length - 1);
 // local storage for page number, or else make it 0
 let currPage = 0;
 
