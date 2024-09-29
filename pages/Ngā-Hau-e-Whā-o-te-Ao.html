@@ -1,0 +1,60 @@
+<!--  amyamburg.github.io -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Self-Guided Cultural Tour</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <img class="logo-img" src="/resources/images/Uni_logo.png" alt="Waikato Universiy Logo">
+        <h1>Self-Guided Cultural Tour</h1>
+    </header>
+    <!-- art info -->
+    <div>
+        <h1>Ngā Hau e Whā o te Ao</h1>
+        <ul>
+            <li>Artists: Kereama Taepa</li>
+            <li>Year of creation: 2019</li>
+            <li>Material: Powder coated 5mm aluminium, external LED lighting</li>
+        </ul>
+    </div>
+    <!-- art image -->
+    <div class="art-img-div">
+        <img class="art-img" src="/resources/images/art1.jpg" alt="first art image">
+
+    </div>
+
+    <!-- audio text -->
+    <div id="text-div" data-file="/resources/text/Ngā_Hau.txt">Loading text...</div>
+
+    <!-- audio and buttons -->
+    <div class="stickToBottom">
+        <button class="footer-btn" id="prev-button">&#8249;</button>
+        <!-- Audio file, might work, might not.-->
+        <audio controls>
+            <source src="/resources/UoW_Tga_GivenRecording.mp3" type="audio/mp3">
+        </audio>
+        <button class="footer-btn" id="next-button">&#8250;</button>
+    </div>
+    <!-- map div -->
+    <div class="map-div">
+        <p>Map of all the art. The current one is highlighted.</p>
+        <img class="map-img" src="/resources/images/map1.png" alt="first map image">
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>i dont know what we need to put here tbh</p>
+
+    </footer>
+
+    <script src="/script/script.js"></script>
+</body>
+
+</html>
