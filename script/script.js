@@ -1,23 +1,36 @@
 console.log("js connected");
 
+
+const pages = [
+    "index",
+    "Te-Poutokomanawa",
+    "Te-Toka-a-Tirikawa",
+    "Te-Pou-Ruawhetū-a-RēhuaTe-Kuraimonoa",
+    "Pātiki",
+    "Ngā-Maunga",
+    "He-niho-taniwha-he-kete-kai-he-maunga",
+    "Pou-tūārongo",
+    "Ngā-Waka",
+    "Te-Moana",
+    "Ngā-Hau-e-Whā-o-te-Ao",
+    "Hine-Turama-&-Hine-te-āhuru",
+    "Te-Manawaroa"
+];
 // let currPage = 0;
-let pageMax = 2;
+let pageMax = pages.length - 1;
 // local storage for page number, or else make it 0
 let currPage = 0;
-
 
 //make currPage the current page
 function setCurrPageURL(){
     const currPath = window.location.pathname;
-    if(currPath.includes("index.html") || currPath === "/"){
-        currPage = 0;
-    } else if (currPath.includes("page1.html")) {
-        currPage = 1;
-    } else if (currPath.includes("page2.html")) {
-        currPage = 2;
-    } else {
-        currPage = 0; // default to index
-    }
+
+    pages.forEach((page, index) => {
+        if (currPath.includes(page)) {
+            currPage = index;
+        }
+    });
+
     console.log("page: " + currPage);
 }
 setCurrPageURL();
@@ -52,13 +65,8 @@ document.getElementById('prev-button').addEventListener('click', function () {
 function navigateToPage() {
 
     // get the page to go to next and go there
-    if (currPage === 0) {
-        window.location.href = '/index.html';
-    }
-    else {
-        const pageUrl = `/pages/page${currPage}.html`;
-        window.location.href = pageUrl;
-    }
+    const pageUrl = `/pages/${pages[currPage]}.html`;
+    window.location.href = pageUrl;
 }
 
 // manage text file loading
