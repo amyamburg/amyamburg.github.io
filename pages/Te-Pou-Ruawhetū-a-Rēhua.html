@@ -32,18 +32,23 @@
     <!-- audio text -->
     <div id="text-div" data-file="/resources/text/Te_Pou.txt">Loading text...</div>
 
-    <!-- audio and buttons -->
-    <div class="stickToBottom">
-        <!-- Audio file, might work, might not.-->
-        <audio controls>
-            <source src="/resources/UoW_Tga_GivenRecording.mp3" type="audio/mp3">
-        </audio>
-        <!-- Buttons-->
-        <div class="button-container">    
-            <button class="footer-btn" id="prev-button">&#8249;</button>
-            <button class="footer-btn" id="next-button">&#8250;</button>
-         </div>
-    </div>
+     <!-- audio and buttons -->
+     <div class="stickToBottom">
+        <!-- Audio file.-->
+        <audio id="audioPlayer">
+           <source src="/resources/UoW_Tga_GivenRecording.mp3" type="audio/mp3">
+       </audio>
+       <div class="custom-controls">
+           <button class="control-btn" id="playPauseBtn">Play</button>
+           <input type="range" id="seekBar" value="0" step="1" min="0">
+       </div>
+
+       <!-- Buttons-->
+       <div class="button-container">    
+           <button class="footer-btn" id="prev-button">&#8249;</button>
+           <button class="footer-btn" id="next-button">&#8250;</button>
+        </div>
+   </div>
     <!-- map div -->
     <div class="map-div">
         <p>Map of all the art. The current one is highlighted.</p>
