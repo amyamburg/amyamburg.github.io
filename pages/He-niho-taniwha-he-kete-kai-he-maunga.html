@@ -5,13 +5,13 @@
 
 <head>
     <title>Self-Guided Cultural Tour</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="/style/style.css">
 </head>
 
 <body>
     <!-- header -->
     <header>
-        <img class="logo-img" src="resources/images/Uni_logo.png" alt="Waikato Universiy Logo">
+        <img class="logo-img" src="/resources/images/Uni_logo.png" alt="Waikato Universiy Logo">
         <h1>Self-Guided Cultural Tour</h1>
     </header>
     <!-- art info -->
@@ -25,26 +25,32 @@
     </div>
     <!-- art image -->
     <div class="art-img-div">
-        <img class="art-img" src="resources/images/art1.jpg" alt="first art image">
+        <img class="art-img" src="/resources/images/art1.jpg" alt="first art image">
 
     </div>
 
     <!-- audio text -->
-    <div id="text-div" data-file="resources/text/He_niho.txt">Loading text...</div>
+    <div id="text-div" data-file="/resources/text/He_niho.txt">Loading text...</div>
 
     <!-- audio and buttons -->
+    <!-- audio and buttons -->
     <div class="stickToBottom">
-        
-        <!-- Audio file, might work, might not.-->
-        <audio controls>
-            <source src="resources/UoW_Tga_GivenRecording.mp3" type="audio/mp3">
-        </audio>
-        <!-- Buttons-->
-        <div class="button-container">    
-            <button class="footer-btn" id="prev-button">&#8249;</button>
-            <button class="footer-btn" id="next-button">&#8250;</button>
-         </div>
-    </div>
+        <!-- Audio file.-->
+        <audio id="audioPlayer">
+           <source src="/resources/UoW_Tga_GivenRecording.mp3" type="audio/mp3">
+       </audio>
+       <div class="custom-controls">
+           <button class="control-btn" id="playPauseBtn">Play</button>
+           <input type="range" id="seekBar" value="0" step="1" min="0">
+       </div>
+
+       <!-- Buttons-->
+       <div class="button-container">    
+           <button class="footer-btn" id="prev-button">&#8249;</button>
+           <button class="footer-btn" id="next-button">&#8250;</button>
+        </div>
+   </div>
+
     <!-- map div -->
     <div class="map-div">
         <p>Map of all the art. The current one is highlighted.</p>
