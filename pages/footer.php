@@ -1,3 +1,3 @@
 <?php
-echo "<p>Php Test</p>";
+echo '<p>Php Test</p>';
 ?>
