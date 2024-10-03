@@ -55,10 +55,11 @@ ul{
 /* hehe carousel exclusively for te manawaroa */
 .carousel {
     position: relative;
-    max-width: 800px;
+    width: 100px;
+    max-width: 100px;
     margin: auto;
     overflow: hidden;
-    height: auto;
+    height: 80vh;
 }
 
 .carousel-images {
@@ -70,9 +71,7 @@ ul{
 .carousel img {
     width: 100%;
     height: auto;
-    max-height: 90vh;
     object-fit: contain;
-    border-radius: 8px;
 }
 
 .prev-btn, .nxt-btn {
@@ -97,6 +96,24 @@ ul{
 
 .prev-btn:hover, .nxt-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* To make the images fit within a small screen */
+@media (max-width: 600px)
+{
+    .carousel {
+        height: 60vh;
+    }
+
+    .prev-btn, .nxt-btn {
+        padding: 5px;
+    }
+
+    .carousel img {
+        width: 100%;
+        height: auto;
+        max-height: 60vh;
+    }
 }
 /* End of carousel things */
  
