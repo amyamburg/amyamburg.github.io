@@ -20,9 +20,7 @@ const pages = [
 let pageMax = (pages.length - 1);
 // local storage for page number, or else make it 0
 let currPage = 0;
-const audioPlayer = document.getElementById('audioPlayer');
-const playPauseBtn = document.getElementById('playPauseBtn');
-const seekBar = document.getElementById('seekBar');
+
 
 
 //make currPage the current page
@@ -55,7 +53,7 @@ function setUpLoadText() {
         loadText(fileName, 'text-div', false);
     }
 }
-//Somehow this is making the text not load...
+// load elements from text files
 function loadText(fileName, divId, events) {
     fetch(fileName)
         .then(response => {
@@ -79,6 +77,9 @@ function loadText(fileName, divId, events) {
 
 //  button functionality 
 function addEvents() {
+    const audioPlayer = document.getElementById('audioPlayer');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const seekBar = document.getElementById('seekBar');
     // next button functionality
     document.getElementById('next-button').addEventListener('click', function () {
 
