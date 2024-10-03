@@ -39,7 +39,7 @@ function setCurrPageURL(){
 document.addEventListener('DOMContentLoaded', function() {
     setCurrPageURL(); //get url
     setUpLoadText(); //load text
-    let fileName = 'sticky-footer.txt';
+    let fileName = '/components/sticky-footer.txt';
     let divId = 'stickyFooter';
     loadText(fileName, divId);
 
