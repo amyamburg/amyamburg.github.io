@@ -71,6 +71,12 @@ function loadText(fileName, divId){
 
 
 // next button functionality 
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+
+
+
 document.getElementById('next-button').addEventListener('click', function () {
 
     if (currPage < pageMax) {
@@ -84,7 +90,7 @@ document.getElementById('next-button').addEventListener('click', function () {
     navigateToPage();
 });
 
-// pervious button functionality (incomplete)
+// pervious button functionality 
 document.getElementById('prev-button').addEventListener('click', function () {
     
     if (currPage > 0) {
@@ -109,7 +115,7 @@ function navigateToPage() {
     }
     window.location.href = pageUrl;
 }
-
+});
 
 
 
