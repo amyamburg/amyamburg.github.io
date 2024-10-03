@@ -53,10 +53,12 @@ ul{
 }
 
 /* Audio stuff*/
-.audio-section
+.audioPlayer
 {
+    width: 100%; 
+    outline: none; 
+    display: flex;
    text-align: center;
-   margin-bottom: 20px;
 }
 
 .custom-controls {
@@ -70,8 +72,8 @@ ul{
     background-color: #e1251b;
     color: white;
     border: none;
-    width: 25px;
-    height: 25px;
+    width: 60px;
+    height: 50px;
     border-radius: 8px;
     cursor: pointer;
     font-size: 18px;
@@ -119,9 +121,10 @@ footer{
 .footer-btn{
     background-color: #e1251b;
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 60px;
+    height: 50px;
     text-align: center;
+    line-height: 50px;
     border-radius: 8px;
     box-shadow: none;
     color: black;
