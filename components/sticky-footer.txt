@@ -1,5 +1,4 @@
-<button class="footer-btn" id="prev-button">&#8249;</button>
-
+    <button class="footer-btn" id="prev-button">&#8249;</button>
     <!-- Audio file.-->
     <audio id="audioPlayer">
            <source src="resources/UoW_Tga_GivenRecording.mp3" type="audio/mp3">

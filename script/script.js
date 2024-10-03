@@ -20,6 +20,10 @@ const pages = [
 let pageMax = (pages.length - 1);
 // local storage for page number, or else make it 0
 let currPage = 0;
+const audioPlayer = document.getElementById('audioPlayer');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const seekBar = document.getElementById('seekBar');
+
 
 //make currPage the current page
 function setCurrPageURL() {
@@ -41,18 +45,18 @@ document.addEventListener('DOMContentLoaded', function () {
     setUpLoadText(); //load text
     let fileName = '/components/sticky-footer.txt';
     let divId = 'stickyFooter';
-    loadText(fileName, divId);
+    loadText(fileName, divId, true);
 
 });
 function setUpLoadText() {
     const contentDiv = document.getElementById('text-div');
     const fileName = contentDiv.getAttribute('data-file');
     if (fileName) {
-        loadText(fileName, 'text-div');
+        loadText(fileName, 'text-div', false);
     }
 }
 //Somehow this is making the text not load...
-function loadText(fileName, divId) {
+function loadText(fileName, divId, events) {
     fetch(fileName)
         .then(response => {
             if (!response.ok) {
@@ -62,6 +66,9 @@ function loadText(fileName, divId) {
         })
         .then(data => {
             document.getElementById(divId).innerHTML = data;
+            if (events) {
+                addEvents();
+            }
         })
         .catch(error => {
             console.error('There was a problem fetching the file:', error);
@@ -70,10 +77,9 @@ function loadText(fileName, divId) {
 
 
 
-// next button functionality 
-
-document.addEventListener('DOMContentLoaded', function () {
-
+//  button functionality 
+function addEvents() {
+    // next button functionality
     document.getElementById('next-button').addEventListener('click', function () {
 
         if (currPage < pageMax) {
@@ -100,27 +106,11 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log("page: " + currPage);
         navigateToPage();
     });
-    function navigateToPage() {
-        let pageUrl = "";
-        // get the page to go to next and go there
-        if (currPage === 0) {
-            pageUrl = `/${pages[currPage]}.html`;
-
-        } else {
-            pageUrl = `/pages/${pages[currPage]}.html`;
-
-        }
-        window.location.href = pageUrl;
-    }
-
 
     //Audio player stuff, please don't mind the mess
-    const audioPlayer = document.getElementById('audioPlayer');
-    const playPauseBtn = document.getElementById('playPauseBtn');
-    const seekBar = document.getElementById('seekBar');
-
     //Play audio
     playPauseBtn.addEventListener('click', () => {
+
         if (audioPlayer.paused) {
             audioPlayer.play();
             playPauseBtn.innerHTML = "&#10074;&#10074;"; // Pause icon (||)
@@ -142,5 +132,22 @@ document.addEventListener('DOMContentLoaded', function () {
     seekBar.addEventListener('input', () => {
         audioPlayer.currentTime = (seekBar.value / 100) * audioPlayer.duration;
     });
-});
+
+}
+
+function navigateToPage() {
+    let pageUrl = "";
+    // get the page to go to next and go there
+    if (currPage === 0) {
+        pageUrl = `/${pages[currPage]}.html`;
+
+    } else {
+        pageUrl = `/pages/${pages[currPage]}.html`;
+
+    }
+    window.location.href = pageUrl;
+}
+
+
+
 
