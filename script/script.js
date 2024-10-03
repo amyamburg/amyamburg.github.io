@@ -73,8 +73,6 @@ function loadText(fileName, divId, events) {
         });
 }
 
-
-
 //  button functionality 
 function addEvents() {
     const audioPlayer = document.getElementById('audioPlayer');
@@ -149,6 +147,36 @@ function navigateToPage() {
     window.location.href = pageUrl;
 }
 
+//==========================================================================================
+//Carousel functionality 
 
+const carouselImages = document.querySelector('.carousel-images');
+const images = document.querySelectorAll('.carousel img');
+const prevBtn = document.querySelector('.prev-btn');
+const nxtBtn = document.querySelector('.nxt-btn');
 
+let currentIndex = 0;
 
+function showImage(index) {
+    if (index < 0) {
+        currentIndex = images.length - 1;
+    } else if (index >= images.length) {
+        currentIndex = 0;
+    } else {
+        currentIndex = index;
+    }
+
+    console.log("The current index is: ", currentIndex);
+
+    //Shifting the images based on the current index
+    const offset = -currentIndex * 100; 
+    carouselImages.style.transform = `translateX(${offset}%)`;
+}
+
+prevBtn.addEventListener('click', () => {
+    showImage(currentIndex - 1);
+});
+
+nxtBtn.addEventListener('click', () => {
+    showImage(currentIndex + 1);
+});
