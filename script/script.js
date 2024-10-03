@@ -34,7 +34,44 @@ function setCurrPageURL(){
     console.log("page: " + currPage);
 }
 
-// next button functionality (incomplete)
+// manage file loading
+
+document.addEventListener('DOMContentLoaded', function() {
+    setCurrPageURL(); //get url
+    setUpLoadText(); //load text
+    loadStickyFooter(); //load sticky footer
+    let fileName = 'sticky-footer.txt';
+    let divId = 'stickyFooter';
+    loadText(fileName, divId);
+
+});
+function setUpLoadText(){
+    const contentDiv = document.getElementById('text-div');
+    const fileName = contentDiv.getAttribute('data-file');
+    if (fileName) {
+        loadText(fileName, 'text-div');
+    }
+}
+//Somehow this is making the text not load...
+function loadText(fileName, divId){
+    fetch(fileName)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Cound not find the file' + response.statusText);
+        }
+        return response.text();
+    })
+    .then(data => {
+        document.getElementById(divId).innerHTML = data;
+    })
+    .catch(error => {
+        console.error('There was a problem fetching the file:', error);
+    });
+}
+
+
+
+// next button functionality 
 document.getElementById('next-button').addEventListener('click', function () {
 
     if (currPage < pageMax) {
@@ -74,40 +111,7 @@ function navigateToPage() {
     window.location.href = pageUrl;
 }
 
-// manage text file loading
 
-document.addEventListener('DOMContentLoaded', function() {
-    setCurrPageURL(); //get url
-    setUpLoadText(); //load text
-    loadStickyFooter(); //load sticky footer
-    let fileName = 'sticky-footer.txt';
-    let divId = 'stickyFooter';
-    loadText(fileName, divId);
-
-});
-function setUpLoadText(){
-    const contentDiv = document.getElementById('text-div');
-    const fileName = contentDiv.getAttribute('data-file');
-    if (fileName) {
-        loadText(fileName, 'text-div');
-    }
-}
-//Somehow this is making the text not load...
-function loadText(fileName, divId){
-    fetch(fileName)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Cound not find the text file' + response.statusText);
-        }
-        return response.text();
-    })
-    .then(data => {
-        document.getElementById(divId).innerHTML = data;
-    })
-    .catch(error => {
-        console.error('There was a problem fetching the text file:', error);
-    });
-}
 
 
 //Audio player stuff, please don't mind the mess
