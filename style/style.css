@@ -52,13 +52,7 @@ ul{
     list-style-type: none; /*remove the bullet points*/
 }
 
-/* Audio stuff*/
-audio{
-    width: 100%; 
-    outline: none; 
-    display: flex;
-   text-align: center;
-}
+
 
 .custom-controls {
     display: flex;
@@ -74,7 +68,6 @@ audio{
     width: 60px;
     height: 50px;
     border-radius: 8px;
-    cursor: pointer;
     font-size: 18px;
 }
 
@@ -85,7 +78,7 @@ audio{
 #seekBar {
     width: 300px;
     height: 20px;
-    cursor: pointer;
+    flex: 1; 
 }
 /* End of audio stuff */
 
