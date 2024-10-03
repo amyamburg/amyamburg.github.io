@@ -48,11 +48,9 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 function setUpLoadText() {
     const contentDiv = document.getElementById('text-div');
-    if (contentDiv){
-        const fileName = contentDiv.getAttribute('data-file');
-        if (fileName) {
-            loadText(fileName, 'text-div', false);
-        }
+    const fileName = contentDiv.getAttribute('data-file');
+    if (fileName) {
+        loadText(fileName, 'text-div', false);
     }
 }
 // load elements from text files
