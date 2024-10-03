@@ -76,7 +76,8 @@ ul{
 }
 
 #seekBar {
-    width: 300px;
+    width: 80%; 
+    max-width: 300px; 
     height: 20px;
     flex: 1; 
     outline: none;
