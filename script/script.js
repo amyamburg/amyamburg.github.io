@@ -112,10 +112,10 @@ playPauseBtn.addEventListener('click', () => {
     if (audioPlayer.paused)
     {
         audioPlayer.play();
-        playPauseBtn.textContent = 'Pause';
+        playPauseBtn.innerHTML = "&#10074;&#10074;"; // Pause icon (||)
     } else {
         audioPlayer.pause();
-        playPauseBtn.textContent = 'Play';
+        playPauseBtn.innerHTML = "&#9658;"; // Play icon (▶)
     }
     
 });
