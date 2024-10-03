@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let fileName = '/components/sticky-footer.html';
     let divId = 'stickyFooter';
     loadText(fileName, divId, true);
+    filename = '/components/footer.html';
+    divId = 'footer';
+    loadText(fileName, divId, false);
 
 });
 function setUpLoadText() {
