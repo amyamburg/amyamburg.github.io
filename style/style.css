@@ -70,7 +70,8 @@ ul{
     background-color: #e1251b;
     color: white;
     border: none;
-    padding: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 8px;
     cursor: pointer;
     font-size: 18px;
@@ -118,7 +119,8 @@ footer{
 .footer-btn{
     background-color: #e1251b;
     display: inline-block;
-    padding: 20px;
+    width: 25px;
+    height: 25px;
     text-align: center;
     border-radius: 8px;
     box-shadow: none;
