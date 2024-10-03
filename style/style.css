@@ -53,8 +53,7 @@ ul{
 }
 
 /* Audio stuff*/
-audio
-{
+audio{
     width: 100%; 
     outline: none; 
     display: flex;
@@ -113,6 +112,8 @@ audio
 }
 
 footer{
+    display: flex;
+    justify-content: center; 
     background-color: #333;
     color: white;
     padding: 20px;
