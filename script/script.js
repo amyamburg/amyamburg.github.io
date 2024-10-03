@@ -77,14 +77,21 @@ function navigateToPage() {
 // manage text file loading
 
 document.addEventListener('DOMContentLoaded', function() {
-    setCurrPageURL();
+    setCurrPageURL(); //get url
+    setUpLoadText(); //load text
+    loadStickyFooter(); //load sticky footer
+    let fileName = 'sticky-footer.txt';
+    let divId = 'stickyFooter';
+    loadText(fileName, divId);
+
+});
+function setUpLoadText(){
     const contentDiv = document.getElementById('text-div');
     const fileName = contentDiv.getAttribute('data-file');
     if (fileName) {
         loadText(fileName, 'text-div');
     }
-});
-
+}
 //Somehow this is making the text not load...
 function loadText(fileName, divId){
     fetch(fileName)
@@ -95,12 +102,13 @@ function loadText(fileName, divId){
         return response.text();
     })
     .then(data => {
-        document.getElementById(divId).textContent = data;
+        document.getElementById(divId).innerHTML = data;
     })
     .catch(error => {
         console.error('There was a problem fetching the text file:', error);
     });
 }
+
 
 //Audio player stuff, please don't mind the mess
 const audioPlayer = document.getElementById('audioPlayer');
