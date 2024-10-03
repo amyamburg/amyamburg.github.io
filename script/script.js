@@ -41,12 +41,9 @@ function setCurrPageURL() {
 document.addEventListener('DOMContentLoaded', function () {
     setCurrPageURL(); //get url
     setUpLoadText(); //load text
-    let fileName = '/components/sticky-footer.html';
-    let divId = 'stickyFooter';
-    loadText(fileName, divId, true);
-    filename = '/components/footer.html';
-    divId = 'footer';
-    loadText(fileName, divId, false);
+    loadText('/components/footer.html', 'footer', false);
+    loadText('/components/sticky-footer.html', 'stickyFooter', true);
+
 
 });
 function setUpLoadText() {
