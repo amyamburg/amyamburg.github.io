@@ -150,33 +150,33 @@ function navigateToPage() {
 //==========================================================================================
 //Carousel functionality 
 
-const carouselImages = document.querySelector('.carousel-images');
-const images = document.querySelectorAll('.carousel img');
-const prevBtn = document.querySelector('.prev-btn');
-const nxtBtn = document.querySelector('.nxt-btn');
+let slideIndex = 1;
+showSlides(slideIndex);
 
-let currentIndex = 0;
-
-function showImage(index) {
-    if (index < 0) {
-        currentIndex = images.length - 1;
-    } else if (index >= images.length) {
-        currentIndex = 0;
-    } else {
-        currentIndex = index;
-    }
-
-    console.log("The current index is: ", currentIndex);
-
-    //Shifting the images based on the current index
-    const offset = -currentIndex * 100; 
-    carouselImages.style.transform = `translateX(${offset}%)`;
+function plusSlides(n) {
+    showSlides(slideIndex += n);
 }
 
-prevBtn.addEventListener('click', () => {
-    showImage(currentIndex - 1);
-});
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
 
-nxtBtn.addEventListener('click', () => {
-    showImage(currentIndex + 1);
-});
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slides");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) {slideIndex = 1;}
+    if (n < 1) {slideIndex = slides.length;}
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
