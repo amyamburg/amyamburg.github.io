@@ -61,7 +61,7 @@ img {vertical-align: middle;}
 
 .carousel {
     position: relative;
-    max-width: 100px;
+    max-width: 200px;
     margin: auto;
 }
 
@@ -69,7 +69,6 @@ img {vertical-align: middle;}
     position: absolute;
     top: 50%;
     width: auto;
-    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 16px;
     margin-top: -22px;
