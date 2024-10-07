@@ -54,7 +54,6 @@ ul{
  
 .custom-controls {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px; /* Space between the controls */
@@ -136,7 +135,7 @@ footer{
     position: sticky;
     bottom: 0;
     display: flex;
-    justify-content: space-between; 
+    justify-content: center; 
     align-items: center; 
     background-color: rgba(204, 204, 204, 0.5);
     padding: 20px;
