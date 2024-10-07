@@ -179,4 +179,34 @@ function showSlides(n) {
 
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
+
+    const currImg = slides[slideIndex - 1].getElementsByTagName("img")[0];
+    currImg.onclick = function() {
+        openModal(currImg.src, currImg.alt);
+    };
+
+    //Function to open modal, make image big
+    function openModal(src, alt) {
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementsById("modalImage");
+        const captionText = document.getElementById("caption");
+
+        modal.style.display = "block";
+        modalImage.src = src;
+        captionText.innerHTML = alt;
+
+        //Close the modal when clicking on the X
+        const closeButton = document.getElementsByClassName("close")[0];
+        closeButton.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        //Close the modal when clicking anywhere outside of the img
+        window.onclick = function(event) {
+            if(event.target === modal)
+            {
+                modal.style.display = "none";
+            }
+        };
+    }
 }
