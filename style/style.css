@@ -196,9 +196,10 @@ img {vertical-align: middle;}
 
 .custom-controls {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 10px; /* Space between the controls */
+    width: 100%;
 }
 
 .control-btn {
@@ -237,9 +238,10 @@ img {vertical-align: middle;}
     height: auto; 
     display: block;
 }
-/* .map-div{
-    
-} */
+.map-div{
+    border-top: 5px solid #e1251b ;
+
+}
 
 .map-img {
     height: 250px; /* smaller map */
@@ -268,19 +270,19 @@ footer{
     color: black;
     font-size: 250%;  
     border: none;
-    transition: transform 0.2s;
+    /* transition: transform 0.2s; */
 
 }
 .footer-btn:hover {
     background-color: #919191; /* Darker colour when hover */
-    transform: scale(1.2); /*make the arrow bigger*/
+    /* transform: scale(1.2); make the arrow bigger */
 }
 
 .stickToBottom {
     position: sticky;
     bottom: 0;
     display: flex;
-    justify-content: center; 
+    justify-content: space-around; 
     align-items: center; 
     background-color: rgba(204, 204, 204, 0.5);
     padding: 20px;
