@@ -15,7 +15,7 @@ h1{
     body {
         font-size: 1.25rem; /* Increase font size to 125% */
     }
-    .footer-container {
+    .footer-link {
         
         font-size: 1.25rem; /* Font size for the links */
     
@@ -30,7 +30,7 @@ h1{
     h1{
         font-size: 1.75rem;
     }
-    .footer-container {
+    .footer-link {
         
         font-size: 1.5rem; /* Font size for the links */
     
@@ -269,8 +269,12 @@ footer{
 .footer-container {
     display: flex; /* Use flexbox to align links */
     gap: 20px; /* Space between links */
-    font-size: 1rem; /* Font size for the links */
+    color: white;
 
+}
+.footer-link {
+    font-size: 1rem; /* Font size for the links */
+    color: white; /* Link text color */
 }
 
 .footer-btn{
