@@ -229,7 +229,7 @@ img {vertical-align: middle;}
 
 #seekBar {
     width: 90%; 
-    max-width: 700px; 
+    max-width: 100%; 
     height: 20px;
     flex: 1; 
     outline: none;
@@ -306,7 +306,7 @@ footer{
     position: sticky;
     bottom: 0;
     display: flex;
-    justify-content: space-around; 
+    justify-content: center; 
     align-items: center; 
     background-color: rgba(204, 204, 204, 0.5);
     padding: 20px;
