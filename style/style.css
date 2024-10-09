@@ -1,23 +1,29 @@
 body{
     margin: 0px;
     font-family: sans-serif;
-    font-size: 100%;
+    font-size: 1rem;
     display: flex; 
     flex-direction: column; 
     justify-content: space-between; 
     
 }
+h1{
+    font-size: 2rem;
+}
 /* Increase text size for smaller screens (e.g., mobile) */
 @media (max-width: 800px) {
     body {
-        font-size: 125%; /* Increase font size to 125% */
+        font-size: 1.25rem; /* Increase font size to 125% */
     }
 }
 
 /* Further increase for very small screens */
 @media (max-width: 500px) {
     body {
-        font-size: 150%; /* Increase font size to 150% for better readability on small devices */
+        font-size: 1.5rem; /* Increase font size to 150% for better readability on small devices */
+    }
+    h1{
+        font-size: 1.75rem;
     }
 }
 
