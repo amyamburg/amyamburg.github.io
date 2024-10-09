@@ -202,7 +202,7 @@ img {vertical-align: middle;}
 }
 
 .control-btn {
-    background-color: #e1251b;
+    background-color: #adadad;
     color: white;
     border: none;
     width: 60px;
@@ -212,7 +212,7 @@ img {vertical-align: middle;}
 }
 
 .control-btn:hover {
-    background-color: #be0403;
+    background-color: #919191;
 }
 
 #seekBar {
@@ -256,9 +256,10 @@ footer{
 
 .footer-btn{
     box-sizing: border-box;
-    background-color: #e1251b;
+    background-color: #adadad;
     display: inline-block;
-    width: 3.75rem;
+    width: 30%; /* Adjust this percentage to fit your layout */
+    max-width: 3.75rem; /* Optional: cap the width */
     height: 3.125rem;
     text-align: center;
     line-height: 50px;
@@ -271,7 +272,7 @@ footer{
 
 }
 .footer-btn:hover {
-    background-color: #be0403; /* Darker colour when hover */
+    background-color: #919191; /* Darker colour when hover */
     transform: scale(1.2); /*make the arrow bigger*/
 }
 
