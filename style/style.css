@@ -232,8 +232,9 @@ img {vertical-align: middle;}
     box-sizing: border-box;
 }
 .art-img{
-    width:100%;
+    width:auto;
     max-width: 800px;
+    max-height: 700px;
     border-radius: 8px;
     height: auto; 
     display: block;
