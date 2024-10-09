@@ -206,7 +206,7 @@ img {vertical-align: middle;}
 
 .custom-controls {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 10px; /* Space between the controls */
     width: 100%;
