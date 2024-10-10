@@ -151,8 +151,18 @@ function navigateToPage() {
 //Carousel functionality 
 
 const audioText = [
+    "Hi how are you",
+    "Hello how are you",
+    "Hey how are you",
+    "Yo how are you",
+    "So how are you",
+    "But how are you",
+    "Now how are you",
+    "However how are you",
+    "Therefore how are you",
+    "Suchas how are you"
 
-]
+];
 
 
 let slideIndex = 1;
@@ -169,6 +179,7 @@ function currentSlide(n) {
 function showSlides(n) {
     const slides = document.getElementsByClassName("slides");
     const dots = document.getElementsByClassName("dot");
+    const textDiv = document.getElementsByClassName("text-div");
 
     if (n > slides.length) {slideIndex = 1;}
     if (n < 1) {slideIndex = slides.length;}
@@ -177,6 +188,10 @@ function showSlides(n) {
     Array.from(slides).forEach(slide => slide.classList.remove("active"));
     Array.from(dots).forEach(dot => dot.classList.remove("active"));
 
+    //Show the current slide
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
+
+    //Update the text for the current slide
+    textDiv.textContent = audioText[slideIndex - 1];
 }
