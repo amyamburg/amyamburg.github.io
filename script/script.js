@@ -150,21 +150,6 @@ function navigateToPage() {
 //==========================================================================================
 //Carousel functionality 
 
-const audioText = [
-    "Hi how are you",
-    "Hello how are you",
-    "Hey how are you",
-    "Yo how are you",
-    "So how are you",
-    "But how are you",
-    "Now how are you",
-    "However how are you",
-    "Therefore how are you",
-    "Suchas how are you"
-
-];
-
-
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -177,21 +162,21 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-    const slides = document.getElementsByClassName("slides");
-    const dots = document.getElementsByClassName("dot");
-    const textDiv = document.getElementsByClassName("text-div");
+    let i;
+    let slides = document.getElementsByClassName("slides");
+    let dots = document.getElementsByClassName("dot");
 
     if (n > slides.length) {slideIndex = 1;}
     if (n < 1) {slideIndex = slides.length;}
 
-    //Remove the active class from all slides and dots
-    Array.from(slides).forEach(slide => slide.classList.remove("active"));
-    Array.from(dots).forEach(dot => dot.classList.remove("active"));
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
 
-    //Show the current slide
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-
-    //Update the text for the current slide
-    textDiv.textContent = audioText[slideIndex - 1];
 }
