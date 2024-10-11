@@ -6,6 +6,12 @@ const pages = [
     "Te-Poutokomanawa",
     "Te-Toka-a-Tirikawa",
     "Te-Pou-Ruawhet%C5%AB-a-R%C4%93hua",
+    "Hine-Turama-%26-Hine-te-%C4%81huru",
+    "Te-Manawaroa"
+];
+
+/*
+pages removed from cycle because they are contained by temanwaroa
     "P%C4%81tiki",
     "Ng%C4%81-Maunga",
     "He-niho-taniwha-he-kete-kai-he-maunga",
@@ -13,9 +19,8 @@ const pages = [
     "Ng%C4%81-Waka",
     "Te-Moana",
     "Ng%C4%81-Hau-e-Wh%C4%81-o-te-Ao",
-    "Hine-Turama-%26-Hine-te-%C4%81huru",
-    "Te-Manawaroa"
-];
+*/
+
 // let currPage = 0;
 let pageMax = (pages.length - 1);
 // local storage for page number, or else make it 0
