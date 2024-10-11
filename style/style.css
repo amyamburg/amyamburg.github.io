@@ -20,6 +20,11 @@ h1{
         font-size: 1.25rem; /* Font size for the links */
     
     }
+
+    .art-img {
+        max-width: 100%;
+        max-height: 70vh;
+    }
 }
 
 /* Further increase for very small screens */
@@ -76,9 +81,12 @@ ul{
 img {vertical-align: middle;}
 
 .carousel {
-    position: relative;
-    max-width: 200px;
+    max-width: 100%;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
 }
 
 .prev-btn, .nxt-btn {
@@ -87,17 +95,13 @@ img {vertical-align: middle;}
     width: auto;
     color: white;
     padding: 16px;
-    margin-top: -22px;
     cursor: pointer;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
     font-weight: bold;
     font-size: 18px;
 }
 
 .nxt-btn {
     right: 0px;
-    border-radius: 3px 0 0 3px;
 }
 
 .text {
@@ -192,13 +196,14 @@ img {vertical-align: middle;}
 .art-img-div{
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
 }
 .art-img{
     width:auto;
-    max-width: 800px;
-    max-height: 700px;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 8px;
     height: auto; 
     display: block;
