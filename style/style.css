@@ -209,18 +209,20 @@ img {vertical-align: middle;}
     display: block;
 }
 
+/* For Hine Turama and Hine-te-ahuru*/
+
 .image-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 20px;
     margin: 20px 0;
 }
 
 /* Style for larger images*/
 .large-img {
-    max-width: 45%;
+    max-width: 90%;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
@@ -230,7 +232,6 @@ img {vertical-align: middle;}
 @media (max-width: 800px){
     .large-img {
         max-width: 100%;
-        margin-bottom: 20px;
     }
 }
 
