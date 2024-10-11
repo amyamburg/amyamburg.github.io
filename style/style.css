@@ -106,6 +106,10 @@ img {vertical-align: middle;}
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.red-dot {
+    background-color: red;
+}
+
 .prev-btn {
     left: 10px;
 }
