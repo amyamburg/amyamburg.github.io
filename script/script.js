@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
     loadText('/components/footer.html', 'footer', false);
     loadText('/components/sticky-footer.html', 'stickyFooter', true);
 
-
 });
 function setUpLoadText() {
     const contentDiv = document.getElementById('text-div');
@@ -163,8 +162,10 @@ function currentSlide(n) {
 
 function showSlides(n) {
     let i;
-    let slides = document.getElementsByClassName("slides");
-    let dots = document.getElementsByClassName("dot");
+    const slides = document.getElementsByClassName("slides");
+    const dots = document.getElementsByClassName("dot");
+    const textDiv = document.getElementById('text-div');
+    
 
     if (n > slides.length) {slideIndex = 1;}
     if (n < 1) {slideIndex = slides.length;}
@@ -172,11 +173,30 @@ function showSlides(n) {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+    
+    const currentSlide = slides[slideIndex - 1];
+    const textFile = currentSlide.getAttribute('data-text');
+    const audioFile = currentSlide.getAttribute("data-audio")
+
+    //Update text
+    if (textFile){
+        fetch(textFile)
+        .then(response => response.text())
+        .then(text => {
+            textDiv.textContent = text;
+        })
+        .catch(error => {
+            textDiv.textContent = "Error loading text.";
+            console.error("Error fetching the text file: ", error);
+        });
+    }
+
 
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
 
+    //show current slide
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
 }
