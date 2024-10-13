@@ -182,6 +182,7 @@ function showSlides(n) {
     const currentSlide = slides[slideIndex - 1];
     const textFile = currentSlide.getAttribute('data-text');
     const audioFile = currentSlide.getAttribute('data-audio');
+    const artInformation = currentSlide.getAttribute('data-info');
 
     //Update text
     if (textFile){
@@ -210,6 +211,16 @@ function showSlides(n) {
         });
     }
     */
+
+    //update art details
+    if (artInformation){
+        try {        
+            document.getElementById('artDetails').innerHTML = document.getElementById(artInformation).innerHTML;
+        } catch (error) {
+            console.error(error);
+        }
+
+    }
 
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
