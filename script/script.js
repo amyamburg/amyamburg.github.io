@@ -181,7 +181,7 @@ function showSlides(n) {
     
     const currentSlide = slides[slideIndex - 1];
     const textFile = currentSlide.getAttribute('data-text');
-    const audioFile = currentSlide.getAttribute("data-audio")
+    const audioFile = currentSlide.getAttribute('data-audio');
 
     //Update text
     if (textFile){
@@ -196,6 +196,20 @@ function showSlides(n) {
         });
     }
 
+    /*
+    //Update audio
+    if (audioFile){
+        fetch(audioFile)
+        .then(response => response.text())
+        .then(text => {
+            textDiv.textContent = text;
+        })
+        .catch(error => {
+            textDiv.textContent = "Error loading audio.";
+            console.error("Error fetching the text file: ", error);
+        });
+    }
+    */
 
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
