@@ -202,6 +202,7 @@ function showSlides(n) {
     try {
         var source = document.getElementById('audioPlayer');
         source.src = audioFile;
+        source.currentTime = 0;
     } catch (error) {
         console.error(error);
     }
