@@ -223,7 +223,7 @@ function showSlides(n) {
             return response.text();
         })
         .then(data => {
-            document.getElementById('artDetails').innerHTML = document.getElementById(artInformation).innerHTML;
+            document.getElementById('artDetails').innerHTML = data.getElementById(artInformation).innerHTML;
         })
         .catch(error => {
             console.error('There was a problem fetching the artdetails:', error);
