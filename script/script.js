@@ -198,19 +198,33 @@ function showSlides(n) {
         });
     }
 
-    
+    //update audio test
+    try {
+        var source = document.getElementById('audioPlayer');
+        source.src = audioFile;
+    } catch (error) {
+        console.error(error);
+    }
+
+    /*
     //Update audio
     if (audioFile){
         fetch(audioFile)
         .then(response => response.text())
         .then(text => {
-            textDiv.textContent = text;
+            //textDiv.textContent = text;
+            var source = document.getElementById('audioPlayer');
+            source.src = elm.getAttribute('data-value');
+            rc="/resources/UoW_Tga_GivenRecording.mp3"
         })
         .catch(error => {
             textDiv.textContent = "Error loading audio.";
             console.error("Error fetching the text file: ", error);
         });
+
+        
     }
+    */
     
 
     //update art details
