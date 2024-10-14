@@ -198,7 +198,7 @@ function showSlides(n) {
         });
     }
 
-    /*
+    
     //Update audio
     if (audioFile){
         fetch(audioFile)
@@ -211,7 +211,7 @@ function showSlides(n) {
             console.error("Error fetching the text file: ", error);
         });
     }
-    */
+    
 
     //update art details
     if (artInformation){
