@@ -214,11 +214,28 @@ function showSlides(n) {
 
     //update art details
     if (artInformation){
+
+        fetch("/components/artInfo.html")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Cound not find the file' + response.statusText);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('artDetails').innerHTML = document.getElementById(artInformation).innerHTML;
+        })
+        .catch(error => {
+            console.error('There was a problem fetching the artdetails:', error);
+        });
+
+        /*
         try {        
             document.getElementById('artDetails').innerHTML = document.getElementById(artInformation).innerHTML;
         } catch (error) {
             console.error(error);
         }
+        */
 
     }
 
