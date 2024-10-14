@@ -5,7 +5,7 @@ const pages = [
     "index",
     "Te-Poutokomanawa",
     "Te-Toka-a-Tirikawa",
-    "Kotahitanga"
+    "Kotahitanga",
     "Te-Pou-Ruawhet%C5%AB-a-R%C4%93hua",
     "Hine-Turama-%26-Hine-te-%C4%81huru",
     "Te-Manawaroa"
