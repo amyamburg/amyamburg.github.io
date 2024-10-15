@@ -83,6 +83,19 @@ function addEvents() {
     const audioPlayer = document.getElementById('audioPlayer');
     const playPauseBtn = document.getElementById('playPauseBtn');
     const seekBar = document.getElementById('seekBar');
+    const currPath = window.location.pathname;
+
+    if (currPath.includes("Kotahitanga"))
+    {
+        audioPlayer.src = "/resources/audio/Mr_G_Mural.mp3";
+    } else if (currPage.includes("Te-Toka-a-Tirikawa"))
+    {
+        audioPlayer.src = "/resources/audio/Pouwhenua.mp3";
+    } else
+    {
+        audioPlayer.src = "";
+    }
+
     // next button functionality
     document.getElementById('next-button').addEventListener('click', function () {
 
