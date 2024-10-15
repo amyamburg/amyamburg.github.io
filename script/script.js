@@ -94,7 +94,7 @@ function addEvents() {
 
     if (currPath.includes("Kotahitanga"))
     {
-        audioPlayer.src = "/resources/audio/Mr_G_Mural.mp3";
+        audioPlayer.src = "/resources/audio/Kotahitanga.mp3";
     } else if (currPath.includes("Te-Toka-a-Tirikawa"))
     {
         audioPlayer.src = "/resources/audio/Pouwhenua.mp3";
@@ -108,7 +108,7 @@ function addEvents() {
     } 
     else if (currPath.includes("Te-Poutokomanawa")) 
     {
-         audioPlayer.src = "/resources/audio/RecTest.mp3";
+         audioPlayer.src = "/resources/audio/Te_Poutokomanawa.mp3";
     } 
     else 
     {
