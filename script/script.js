@@ -91,7 +91,19 @@ function addEvents() {
     } else if (currPath.includes("Te-Toka-a-Tirikawa"))
     {
         audioPlayer.src = "/resources/audio/Pouwhenua.mp3";
-    } else
+    } else if (currPath.includes("Te-Pou-Ruawhet%C5%AB-a-R%C4%93hua")) 
+    {
+        audioPlayer.src = "/resources/audio/Celestial_Panel.mp3";
+    } 
+    else if (currPath.includes("Hine-Turama-%26-Hine-te-%C4%81huru")) 
+    {
+         audioPlayer.src = "/resources/audio/Hine_Turama_and_Hine_Te_Ahuru.mp3";
+    } 
+    else if (currPath.includes("Te-Poutokomanawa")) 
+    {
+         audioPlayer.src = "/resources/audio/RecTest.mp3";
+    } 
+    else 
     {
         audioPlayer.src = "";
     }
