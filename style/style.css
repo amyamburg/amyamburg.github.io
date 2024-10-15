@@ -186,6 +186,7 @@ img {vertical-align: middle;}
 .control-btn {
     font-family: 'Courier New', Courier, monospace; /* Example with monospace font */
     background-color: #adadad;
+    display: flex; /*display: inline-block; FIX IS HERE */
     color: white;
     border: none;
     width: 3rem;
@@ -281,7 +282,7 @@ footer{
     font-family: 'Courier New', Courier, monospace; /* Example with monospace font */
     box-sizing: border-box;
     background-color: #adadad;
-    display: inline-block;
+    display: flex; /*display: inline-block; FIX IS HERE */
     width: 30%; /* Adjust this percentage to fit your layout */
     max-width: 3rem; /* Optional: cap the width */
     height: 3rem;
