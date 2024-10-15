@@ -50,7 +50,8 @@ document.addEventListener('DOMContentLoaded', function () {
     loadText('/components/footer.html', 'footer', false);
     loadText('/components/sticky-footer.html', 'stickyFooter', true);
     if(currPage == 0){
-        document.getElementById("controls").innerHTML = "";
+        alert("in index");
+        document.getElementById('controls').innerHTML = "CLEARRR";
     }
 
 });
