@@ -51,21 +51,21 @@ document.addEventListener('DOMContentLoaded', function () {
     loadText('/components/sticky-footer.html', 'stickyFooter', true);
 
     const currPath = window.location.pathname;
-    const audioControls = document.getElementById("audio-controls");
+    const audioPlayer = document.getElementById("audioPlayer");
 
     if (currPath === "/" || currPath.includes("index.html"))
     {
-        if (audioControls)
+        if (audioPlayer)
         {
             //Hides the audio player on the index page
-            audioControls.style.display = "none"; 
+            audioPlayer.style.display = "none"; 
         }
     }
     else{
-        if (audioControls)
+        if (audioPlayer)
         {
             //Show on other pages
-            audioControls.style.display = "block";
+            audioPlayer.style.display = "block";
         }
     }
 
