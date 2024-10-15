@@ -186,9 +186,8 @@ function navigateToPage() {
 //Carousel functionality 
 
 let slideIndex = 1;
-if (currPage == 5){
-    showSlides(slideIndex);
-}
+showSlides(slideIndex);
+
 
 
 function plusSlides(n) {
