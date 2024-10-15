@@ -50,6 +50,25 @@ document.addEventListener('DOMContentLoaded', function () {
     loadText('/components/footer.html', 'footer', false);
     loadText('/components/sticky-footer.html', 'stickyFooter', true);
 
+    const currPath = window.location.pathname;
+    const audioControls = document.getElementById("audio-controls");
+
+    if (currPath === "/" || currPath.includes("index.html"))
+    {
+        if (audioControls)
+        {
+            //Hides the audio player on the index page
+            audioControls.style.display = "none"; 
+        }
+    }
+    else{
+        if (audioControls)
+        {
+            //Show on other pages
+            audioControls.style.display = "block";
+        }
+    }
+
 });
 function setUpLoadText() {
     const contentDiv = document.getElementById('text-div');
