@@ -49,6 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
     setUpLoadText(); //load text
     loadText('/components/footer.html', 'footer', false);
     loadText('/components/sticky-footer.html', 'stickyFooter', true);
+    if(currPage == 0){
+        document.getElementById("controls").innerHTML = "";
+    }
 
 });
 function setUpLoadText() {
