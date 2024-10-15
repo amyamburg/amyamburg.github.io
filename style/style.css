@@ -93,7 +93,7 @@ img {vertical-align: middle;}
 .prev-btn, .nxt-btn {
     position: absolute;
     top: 50%;
-    width: auto;
+    /*width: auto;*/
     transform: translateY(-50%);
     z-index: 10;
     color: white;
@@ -186,7 +186,7 @@ img {vertical-align: middle;}
 .control-btn {
     font-family: 'Courier New', Courier, monospace; /* Example with monospace font */
     background-color: #adadad;
-    display: flex; /*display: inline-block; FIX IS HERE */
+    /*display: flex; display: inline-block; FIX IS HERE */
     color: white;
     border: none;
     width: 3rem;
