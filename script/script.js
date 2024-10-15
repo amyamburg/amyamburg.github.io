@@ -112,7 +112,7 @@ function addEvents() {
     } 
     else 
     {
-        audioPlayer.src = "";
+        //audioPlayer.src = "";
     }
 
     // next button functionality
