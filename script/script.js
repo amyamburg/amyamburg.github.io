@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
         alert("in index");
         document.getElementById('controls').innerHTML = "CLEARRR";
     }
+    
 
 });
 function setUpLoadText() {
@@ -185,7 +186,10 @@ function navigateToPage() {
 //Carousel functionality 
 
 let slideIndex = 1;
-showSlides(slideIndex);
+if (currPage == 5){
+    showSlides(slideIndex);
+}
+
 
 function plusSlides(n) {
     showSlides(slideIndex += n);
