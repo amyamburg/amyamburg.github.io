@@ -277,6 +277,14 @@ footer{
     font-size: 1rem; /* Font size for the links */
     color: white; /* Link text color */
 }
+.index-footer-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* Space between the controls */
+    width: 100%;
+}
+
 
 .footer-btn{
     font-family: 'Courier New', Courier, monospace; /* Example with monospace font */
