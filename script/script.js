@@ -50,25 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
     loadText('/components/footer.html', 'footer', false);
     loadText('/components/sticky-footer.html', 'stickyFooter', true);
 
-    const currPath = window.location.pathname;
-    const audioPlayer = document.getElementById("audioPlayer");
-
-    if (currPath === "/" || currPath.includes("index.html"))
-    {
-        if (audioPlayer)
-        {
-            //Hides the audio player on the index page
-            audioPlayer.style.display = "none"; 
-        }
-    }
-    else{
-        if (audioPlayer)
-        {
-            //Show on other pages
-            audioPlayer.style.display = "block";
-        }
-    }
-
 });
 function setUpLoadText() {
     const contentDiv = document.getElementById('text-div');
