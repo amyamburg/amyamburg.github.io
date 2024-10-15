@@ -281,7 +281,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px; /* Space between the controls */
+    gap: 70%; /* Space between the controls */
     width: 100%;
 }
 
