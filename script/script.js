@@ -48,10 +48,12 @@ document.addEventListener('DOMContentLoaded', function () {
     setCurrPageURL(); //get url
     setUpLoadText(); //load text
     loadText('/components/footer.html', 'footer', false);
-    loadText('/components/sticky-footer.html', 'stickyFooter', true);
     if(currPage == 0){
-        alert("in index");
-        document.getElementById('controls').innerHTML = "CLEARRR";
+        loadText('/components/sticky-footer-index.html', 'stickyFooter', true);
+    }
+    else{
+        loadText('/components/sticky-footer.html', 'stickyFooter', true);
+
     }
     
 
