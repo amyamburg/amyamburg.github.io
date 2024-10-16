@@ -281,7 +281,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 70%; /* Space between the controls */
+    gap: 100px; /* Space between the controls */
     width: 100%;
 }
 
@@ -291,7 +291,7 @@ footer{
     box-sizing: border-box;
     background-color: #adadad;
     display: flex; /*display: inline-block; FIX IS HERE */
-    width: 30%; /* Adjust this percentage to fit your layout */
+    width: auto;
     max-width: 3rem; /* Optional: cap the width */
     height: 3rem;
     text-align: center;
@@ -303,6 +303,8 @@ footer{
     border: none;
     /*flex-shrink: 0;*/ 
     /* transition: transform 0.2s; */
+    -webkit-appearance: none;
+    appearance: none;
 
 }
 .footer-btn:hover {
