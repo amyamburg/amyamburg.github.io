@@ -17,13 +17,17 @@ this should be placed in the /resources/text folder and named after the appropri
 ## Page/Code Modification
 now to make the code modifications.
 1. first create a copy of the page template and place it in the /pages folder, and rename it after the new art work
-2. next go through the page and replace the following (they should be labled in the template)
-   - title
-   - bla
-   - bla
-   - bla
+2. next go through the page and replace the following (they should be labled in the template with a #)
+   - Name of the artwork (Around line 20)
+   - Name of artist (around line 22)
+   - Year of creation (around line 23)
+   - Materials (around line 24)
+   - refference the image of the artwork (around line 30)
+   - alt text for the image of the artwork (around line 30)
+   - path for the text for the artwork (around line 35)
+   - map for the artwork (around line 38)
 3. next some modifications will need to be made to the scripts file these involve the following
-   - first of all at the top of the scripts file (around line 5)there is a list of all the pages for the tour. the new page will need to be added to this list. to do this add a ',' to the end of the last line and then on the next line put the name of the .html page in between two' " '. (don't include the .html that is in the name)
+   - first of all at the top of the scripts file (around line 5) there is a list of all the pages for the tour. the new page will need to be added to this list. to do this add a ',' to the end of the last line and then on the next line put the name of the .html page in between two' " '. (don't include the .html that is in the name)
    - next a change needs to be made to load the audiofile onto the page. down at around line 100, there is a bunch of if else statements. after the last 'else if' but before the start of the next 'else' (BE MORE CLEAR HERE) add the following:
 
    ```
