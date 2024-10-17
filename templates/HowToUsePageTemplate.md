@@ -23,7 +23,7 @@ this should be placed in the /resources/text folder and named after the appropri
   alternatively a copy of the blank map with no markers on it has been included (TGAMapBLANK.png) and this can be used to reproduce the maps from scratch.
   (again making sure the names of the produced files ("TGAMapA.png", "TGAMapB.png", etc.) match up to the same locations).
   
-  after these new maps are created they should be placed in the /resources/images/maps folder, replaceing all map files already there with the updated ones.
+  after these new maps are created they should be placed in the /resources/images/maps folder, replacing all map files already there with the updated ones.
 
 ## Page/Code Modification
 now to make the code modifications.
@@ -40,7 +40,7 @@ now to make the code modifications.
    - path to the audio recording of the artwork (around line 44)
 3. next some modifications will need to be made to the scripts file these involve the following
    - first of all at the top of the scripts file (around line 5) there is a list of all the pages for the tour. the new page will need to be added to this list. to do this add a ',' to the end of the last line and then on the next line put the name of the .html page in between two' " '. (don't include the .html that is in the name)
-   - next a change needs to be made to load the audiofile onto the page. down at around line 100, there is a bunch of if else statements. after the last 'else if' but before the start of the next 'else' (BE MORE CLEAR HERE) add the following:
+   - next a change needs to be made to load the audiofile onto the page. down at around line 100, there is a bunch of if else statements. a new else if statement will need to be added to these. inbetween two of them ( after the '}' but before the 'else if' ) add the following:
 
    ```
    else if (currPath.includes("#PAGE NAME OF NEW ART WORK"))
@@ -48,10 +48,6 @@ now to make the code modifications.
       audioPlayer.src = "/resources/audio/#AUDIO RECORDING OF NEW ART WORK.mp3";
    }
    ```
-   but note to replace the two # objects with the appropriate refferences
+   but note to replace the two # objects with the appropriate refferences.
 
-## Other notes
-- Bla
-- Bla
-- Bla
 
