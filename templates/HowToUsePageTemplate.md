@@ -23,9 +23,19 @@ now to make the code modifications.
    - bla
    - bla
 3. next some modifications will need to be made to the scripts file these involve the following
-   - add page to cycle
-   - do modif to alow audio to add
+   - first of all at the top of the scripts file (around line 5)there is a list of all the pages for the tour. the new page will need to be added to this list. to do this add a ',' to the end of the last line and then on the next line put the name of the .html page in between two' " '. (don't include the .html that is in the name)
+   - next a change needs to be made to load the audiofile onto the page. down at around line 100, there is a bunch of if else statements. after the last 'else if' but before the start of the next 'else' (BE MORE CLEAR HERE) add the following:
 
+   ```
+   else if (currPath.includes("#PAGE NAME OF NEW ART WORK"))
+   {
+      audioPlayer.src = "/resources/audio/#AUDIO RECORDING OF NEW ART WORK.mp3";
+   }
+   ```
+   but note to replace the two # objects with the appropriate refference
 
 ## Other notes
+- Bla
+- Bla
+- Bla
 
