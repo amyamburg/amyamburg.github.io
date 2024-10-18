@@ -1,6 +1,11 @@
 console.log("js connected");
 
-
+/*
+    list of all the pages in the website
+    this is used to for the next and back buttons
+    
+    When adding new pages add them to the end of this list
+*/
 const pages = [
     "index",
     "Te-Poutokomanawa",
@@ -11,16 +16,7 @@ const pages = [
     "Kotahitanga"
 ];
 
-/*
-pages removed from cycle because they are contained by temanwaroa
-    "P%C4%81tiki",
-    "Ng%C4%81-Maunga",
-    "He-niho-taniwha-he-kete-kai-he-maunga",
-    "Pou-t%C5%AB%C4%81rongo",
-    "Ng%C4%81-Waka",
-    "Te-Moana",
-    "Ng%C4%81-Hau-e-Wh%C4%81-o-te-Ao",
-*/
+
 
 // let currPage = 0;
 let pageMax = (pages.length - 1);
@@ -29,7 +25,7 @@ let currPage = 0;
 
 
 
-//make currPage the current page
+//function to make currPage the current page
 function setCurrPageURL() {
     const currPath = window.location.pathname;
 
@@ -42,7 +38,7 @@ function setCurrPageURL() {
     console.log("page: " + currPage);
 }
 
-// manage file loading
+// Manage file loading
 
 document.addEventListener('DOMContentLoaded', function () {
     setCurrPageURL(); //get url
@@ -58,6 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
 });
+
+
 function setUpLoadText() {
     const contentDiv = document.getElementById('text-div');
     const fileName = contentDiv.getAttribute('data-file');
@@ -92,6 +90,11 @@ function addEvents() {
     const seekBar = document.getElementById('seekBar');
     const currPath = window.location.pathname;
 
+    /*
+        list of else if statements to load the appropriate audio file for a page
+
+        When adding a new page add a new else if here for loading the audio
+    */
     if (currPath.includes("Kotahitanga"))
     {
         audioPlayer.src = "/resources/audio/Kotahitanga.mp3";
@@ -185,12 +188,10 @@ function navigateToPage() {
 }
 
 //==========================================================================================
-//Carousel functionality 
+//Carousel functionality - note that this code is only relevant to the page for te manawaroa
 
 let slideIndex = 1;
 showSlides(slideIndex);
-
-
 
 function plusSlides(n) {
     showSlides(slideIndex += n);
@@ -241,27 +242,6 @@ function showSlides(n) {
         console.error(error);
     }
 
-    /*
-    //Update audio
-    if (audioFile){
-        fetch(audioFile)
-        .then(response => response.text())
-        .then(text => {
-            //textDiv.textContent = text;
-            var source = document.getElementById('audioPlayer');
-            source.src = elm.getAttribute('data-value');
-            rc="/resources/UoW_Tga_GivenRecording.mp3"
-        })
-        .catch(error => {
-            textDiv.textContent = "Error loading audio.";
-            console.error("Error fetching the text file: ", error);
-        });
-
-        
-    }
-    */
-    
-
     //update art details
     if (artInformation){
 
@@ -280,13 +260,6 @@ function showSlides(n) {
             console.error('There was a problem fetching the artdetails:', error);
         });
 
-        /*
-        try {        
-            document.getElementById('artDetails').innerHTML = document.getElementById(artInformation).innerHTML;
-        } catch (error) {
-            console.error(error);
-        }
-        */
 
     }
 
