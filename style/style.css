@@ -1,0 +1,118 @@
+/* Body background is light pink and text size is bigger */
+body{
+    background-color: #E7CBF8;
+    font-size: 150%;
+
+}
+/* changing font, text size is bigger, and center alignment */
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 175%;
+    text-align: center;
+    
+}
+/* black text colour, pink background colour, different font, and bigger size */
+h2{
+    color: black;
+    background-color: #DCADF9;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 10px;
+    font-size: 125%;
+}
+/* when it is in the div, text colour is purple and background colour is pink. */
+div > h2{
+    color: blueviolet;
+    background-color: violet;
+    
+}
+/* given a margin and purple text colour */
+p{
+    margin-left: 10px;
+    color: blueviolet;
+
+}
+/* when it is in the div, text colour is black. */
+div > p{
+    color: black;
+}
+/* purple border, pink background, and margins on top and bottom */
+div{
+    border: 2px solid blueviolet;
+    background-color: violet;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* the bullet points are purple flowers */
+li{
+
+    list-style-image:url('images/flower-small.png');
+    
+}
+/* margins and padding, and purple borders */
+table, tr, td{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid;
+    border-color: blueviolet;
+    border-collapse: collapse;
+}
+/* light purple background for the rows */
+tr{
+    background-color: #E7CBF8;
+}
+/* the odd rows have a stronger purple background colour */
+.oddRow{
+    background-color: #DCADF9;
+}
+/* this gives a purple background, for the span*/
+.purpBack{
+    background-color: #DCADF9;
+}
+/* padding on the top and botton */
+nav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* items in the nav bar have purple text, rounded edges, pink background, padding, and a different font */
+nav a{
+    color: blueviolet;
+    border-radius: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: violet;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+/* when items in the nav are hovered over, they go light purple */
+nav a:hover {
+    background-color: #DCADF9;
+}
+/* the current page's nav bar element background is the same as the body background */
+nav a.current{
+    background-color: #E7CBF8;
+}
+/* even when hovered over */
+nav a.current:hover{
+    background-color: #E7CBF8;
+    color: blueviolet;
+}
+/* in grid format, puts the element in the center. used for pictures. */
+.center{
+    display:grid;
+    margin-left: auto;
+    margin-right: auto ;
+    width: 50%;
+}
+/* pictures get padding and margin */
+picture{
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
