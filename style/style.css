@@ -27,7 +27,7 @@ div{
 /* the bullet points are purple flowers */
 li{
 
-    list-style-image:url('images/flower-small.png');
+    list-style-image:url('../images/flower-small.png');
     
 }
 /* margins and padding, and purple borders */
