@@ -1,13 +1,11 @@
 /* Body background is light pink and text size is bigger */
 body{
     background-color: #E7CBF8;
-    font-size: 150%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 /* changing font, text size is bigger, and center alignment */
 h1{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 175%;
     text-align: center;
     
 }
@@ -15,27 +13,10 @@ h1{
 h2{
     color: black;
     background-color: #DCADF9;
-
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-left: 10px;
-    font-size: 125%;
 }
-/* when it is in the div, text colour is purple and background colour is pink. */
-div > h2{
-    color: blueviolet;
-    background-color: violet;
-    
-}
-/* given a margin and purple text colour */
-p{
-    margin-left: 10px;
-    color: blueviolet;
 
-}
-/* when it is in the div, text colour is black. */
-div > p{
-    color: black;
-}
+
 /* purple border, pink background, and margins on top and bottom */
 div{
     border: 2px solid blueviolet;
