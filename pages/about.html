@@ -5,6 +5,8 @@
     <head>
         <title>Amy's website!</title>
         <link rel="stylesheet" href="../style/style.css">
+        <script src="../script/script.js"></script>
+
     </head>
     <!-- contents of the web page -->
     <body>
@@ -13,16 +15,18 @@
             <a href="../index.html">home</a>
             <a href="/pages/about.html">about me</a> 
             <a href="">art gallery</a> 
-            <a href="">quiz</a> 
+            <a href="">other</a> 
         </nav>
         <!-- title -->
         <div>
-            <h2>
+            <h1>About Me</h1>
+
+        </div>
+        <h2>
             Sup! I'm Amy
 
-            </h2>
-        </div>
-        
+        </h2>
+        <p> my instagram: <a href="https://www.instagram.com/amyam.burg/">@amyam.burg</a> </p>
         <p>
             Things I like (in no particular order)
         </p>
@@ -34,6 +38,37 @@
             <li>fruit</li>
 
         </ul>
+        <div class="Quiz"> 
+            <h3>How well do you know me?</h3>
+
+        <div id="q1">
+            <p>What is my favourite colour?</p>
+            <button onclick="answer(1, 'pink')">Pink</button>
+            <button onclick="answer(1, 'blue')">Blue</button>
+            <button onclick="answer(1, 'green')">Green</button>
+        </div>
+
+        <div id="q2" class="hidden">
+            <p>What is my favourite animal?</p>
+            <button onclick="answer(2, 'cat')">Cat</button>
+            <button onclick="answer(2, 'dog')">Dog</button>
+            <button onclick="answer(2, 'bird')">Bird</button>
+        </div>
+
+        <div id="q3" class="hidden">
+            <p>What do I like most?</p>
+            <button onclick="answer(3, 'community')">Community</button>
+            <button onclick="answer(3, 'games')">Games</button>
+            <button onclick="answer(3, 'cars')">Cars</button>
+        </div>
+
+        <div id="result" class="hidden">
+            <h3 id="scoreText"></h3>
+            <button onclick="restart()">Try again</button>
+        </div>
+
+
+        </div>
 
     </body>
 </html>
